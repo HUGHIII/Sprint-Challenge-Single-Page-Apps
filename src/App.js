@@ -12,7 +12,15 @@ export default function App() {
   return (
     <main>
       <Header />
-      <CharacterList/>
+
+      <Route exact path='/'>
+        <WelcomePage />
+        </Route>
+
+      <Route path='/characters'>
+        <CharacterList/>
+        </Route>
+      
     </main>
   );
 }
