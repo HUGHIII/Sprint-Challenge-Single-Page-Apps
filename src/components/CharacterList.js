@@ -2,13 +2,16 @@ import React, { useEffect, useState } from "react";
 import CharacterCard from './CharacterCard';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import SearchForm from './SearchForm';
+import SearchForm from "./SearchForm";
+// import SearchForm from './SearchForm';
 
 
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [character, setCharacter] = useState([])
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -25,14 +28,30 @@ export default function CharacterList() {
       })
     
   }, [setCharacter]);
+  ////////////////////////useEffect for character ^ and use effect for search below
+
+  
+  useEffect(() => {
+      const results = character.filter(element =>
+          element.name.toLowerCase().includes(searchTerm));
+          setSearchResults(results);
+  }, [searchTerm]);
+
+
 
   return (
     <section className="character-list">
+
       <button><Link to='/'>Return to Home</Link></button>
-      {character.map(e => (
+
+      <SearchForm setSearchTerm={setSearchTerm} serchTerm={searchTerm} />
+
+      {searchResults.map(e => (
         <CharacterCard key={e.id} char={e} />
-        <SearchForm key={e.id} char ={e} />
-      ))}
+         ))}
+
+      
+
     </section>
   );
 }
