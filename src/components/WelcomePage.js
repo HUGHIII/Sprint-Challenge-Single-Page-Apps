@@ -10,6 +10,15 @@ margin:0 20%;
 const Img = styled.img `
 border-radius:5px;
 
+
+`
+
+const Button = styled.button `
+font-size:20px;
+background-color:#33ccff;
+border-radius:5px;
+padding:2%;
+margin-top:5%;
 `
 
 export default function WelcomePage() {
@@ -22,7 +31,8 @@ export default function WelcomePage() {
           src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
           alt="rick"
         />
-        <button className='charList-button'><Link to='/characters'>Click for List of Characters</Link></button>
+        <Button className='charList-button'><Link to='/characters'>Click for List of Characters</Link></Button>
+
       </Welcome>
     </section>
   );

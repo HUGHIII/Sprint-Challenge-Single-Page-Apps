@@ -3,7 +3,15 @@ import CharacterCard from './CharacterCard';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import SearchForm from "./SearchForm";
-// import SearchForm from './SearchForm';
+import styled from 'styled-components';
+
+const ButtonDiv = styled.div `
+display:flex;
+flex-direction:row;
+padding:5%;
+
+`
+
 
 
 
@@ -42,9 +50,10 @@ export default function CharacterList() {
   return (
     <section className="character-list">
 
+      <ButtonDiv className='button and search'>
       <button><Link to='/'>Return to Home</Link></button>
-
       <SearchForm setSearchTerm={setSearchTerm} serchTerm={searchTerm} />
+      </ButtonDiv>
 
       {searchResults.map(e => (
         <CharacterCard key={e.id} char={e} />
