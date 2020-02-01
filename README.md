@@ -129,3 +129,12 @@ Complete search component to your list views.
 > Note: AFTER Sprint Challenge: Solutions to many stretch goals (and live demo URLs) are available from TLs (or GitHub admins.)
 
 There are many ways to implement each of these requirements!
+
+
+
+
+ANSWER TO QUESTION>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+client side routing offers a quicker transtion between pages because it does not have to make a request to the server every time a user navigates the webpage.
+
