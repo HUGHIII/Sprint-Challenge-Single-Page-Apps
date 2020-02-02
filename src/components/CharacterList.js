@@ -55,8 +55,10 @@ export default function CharacterList() {
       <SearchForm setSearchTerm={setSearchTerm} serchTerm={searchTerm} />
       </ButtonDiv>
 
-      {searchResults.map(e => (
+      {searchTerm?searchResults.map(e => (
         <CharacterCard key={e.id} char={e} />
+         )):character.map(e => (
+           <CharacterCard key={e.id} char={e} />
          ))}
 
       
