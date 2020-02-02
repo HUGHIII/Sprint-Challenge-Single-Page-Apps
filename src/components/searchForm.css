@@ -1,0 +1,19 @@
+.search-form {
+   
+    display: flex;
+    justify-content: center;
+    padding:2%
+}
+
+input {
+    border: 2px solid rgb(126, 157, 185);
+    border-radius:3px;
+    padding:2%;
+    margin-left:1%;
+}
+
+button {
+margin-right:1%;
+border:  2px solid rgb(126, 157, 185);
+border-radius:3px;
+}

@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import './searchForm.css';
+import { Link } from 'react-router-dom';
+// import { Button } from 'reactstrap';
+
 
 export default function SearchForm(props) {
 
@@ -23,11 +27,13 @@ export default function SearchForm(props) {
 
   return (
     <section className="search-form">
+      
+      <button><Link to='/'>Return to Home</Link></button>
       <form>
         
          <input
           type="text"
-          placeholder="Search"
+          placeholder="Search by Name"
           value={props.searchTerm}
           onChange={handleChange}
         />
